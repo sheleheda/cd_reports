@@ -1,0 +1,9 @@
+﻿------ Build started: Project: Ticketing Box Office, Configuration: Test ------
+Skipping 'ld_sales_rpt_new.rdl'. Item is up to date.
+Build complete -- 0 errors, 0 warnings
+------ Deploy started: Project: Ticketing Box Office, Configuration: Test ------
+Deploying to http://duff.tessitura.cd.local/ReportServer_test
+Deploying report '/Ticketing Box Office/ld_sales_rpt_new'.
+Deploy complete -- 0 errors, 0 warnings
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+========== Deploy: 1 succeeded, 0 failed, 0 skipped ==========
