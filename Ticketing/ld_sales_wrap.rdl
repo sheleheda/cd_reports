@@ -144,6 +144,10 @@
           <DataField>revenue</DataField>
           <rd:UserDefined>true</rd:UserDefined>
         </Field>
+        <Field Name="lbl_week_no">
+          <DataField>lbl_week_no</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
       </Fields>
     </DataSet>
     <DataSet Name="LRP_DAILY_WRAP_Sales">
@@ -211,6 +215,10 @@
         </Field>
         <Field Name="capacity_cnt">
           <DataField>capacity_cnt</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="lbl_week_no">
+          <DataField>lbl_week_no</DataField>
           <rd:UserDefined>true</rd:UserDefined>
         </Field>
       </Fields>
@@ -1308,7 +1316,7 @@
                                   <Value>=Fields!budgeted_sales.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>c2</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4093,7 +4101,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=iif(Max(Fields!week_no.Value) &lt; 1, "***Week***", "")</Value>
+                                          <Value>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "Week " &amp; Fields!lbl_week_no.Value, "")</Value>
                                           <Style>
                                             <FontSize>6pt</FontSize>
                                             <FontWeight>Bold</FontWeight>
@@ -4110,7 +4118,7 @@
                                     <Border>
                                       <Style>None</Style>
                                     </Border>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -4142,7 +4150,7 @@
                                     <Border>
                                       <Style>None</Style>
                                     </Border>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -4173,7 +4181,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox140</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -4204,7 +4215,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox141</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -4235,7 +4249,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox142</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -4267,7 +4284,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox147</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -4298,13 +4318,17 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox148</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
                                     <PaddingBottom>2pt</PaddingBottom>
                                   </Style>
                                 </Textbox>
+                                <rd:Selected>true</rd:Selected>
                               </CellContents>
                             </TablixCell>
                           </TablixCells>
@@ -4336,6 +4360,14 @@
                                   <rd:DefaultName>textbox9</rd:DefaultName>
                                   <ZIndex>16</ZIndex>
                                   <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <TopBorder>
+                                      <Color>Black</Color>
+                                      <Style>Solid</Style>
+                                      <Width>1pt</Width>
+                                    </TopBorder>
                                     <BackgroundColor>LightGrey</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
@@ -5108,7 +5140,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=ReportItems!daily_revenue3.Value / ReportItems!daily_revenue_6.value</Value>
+                                          <Value>=(Sum(Fields!tix.Value)+ Sum(Fields!comp.Value))/Fields!capacity_cnt.Value</Value>
                                           <Style>
                                             <FontSize>6pt</FontSize>
                                             <Format>0.00%</Format>
@@ -5148,7 +5180,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=iif(Max(Fields!week_no.Value) &lt; 1, "***Week***", "")</Value>
+                                          <Value>=iif(max(Fields!lbl_week_no.Value) &gt; 0, "Week " &amp; Fields!lbl_week_no.Value, "")</Value>
                                           <Style>
                                             <FontSize>6pt</FontSize>
                                             <FontWeight>Bold</FontWeight>
@@ -5165,14 +5197,13 @@
                                     <Border>
                                       <Style>None</Style>
                                     </Border>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
                                     <PaddingBottom>2pt</PaddingBottom>
                                   </Style>
                                 </Textbox>
-                                <rd:Selected>true</rd:Selected>
                               </CellContents>
                             </TablixCell>
                             <TablixCell>
@@ -5198,7 +5229,7 @@
                                     <Border>
                                       <Style>None</Style>
                                     </Border>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -5229,7 +5260,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox154</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -5260,7 +5294,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox155</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -5291,7 +5328,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox156</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -5323,7 +5363,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox157</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -5354,7 +5397,10 @@
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox158</rd:DefaultName>
                                   <Style>
-                                    <BackgroundColor>=iif(Max(Fields!week_no.Value) &lt; 1, "LightGrey", "White")</BackgroundColor>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>=iif(Max(Fields!lbl_week_no.Value) &gt; 0, "LightGrey", "White")</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
                                     <PaddingTop>2pt</PaddingTop>
@@ -5392,6 +5438,14 @@
                                   <rd:DefaultName>textbox9</rd:DefaultName>
                                   <ZIndex>16</ZIndex>
                                   <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <TopBorder>
+                                      <Color>Black</Color>
+                                      <Style>Solid</Style>
+                                      <Width>1pt</Width>
+                                    </TopBorder>
                                     <BackgroundColor>LightGrey</BackgroundColor>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
@@ -5427,6 +5481,9 @@
                                   <rd:DefaultName>daily_tix_1</rd:DefaultName>
                                   <ZIndex>15</ZIndex>
                                   <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
                                     <TopBorder>
                                       <Style>Solid</Style>
                                     </TopBorder>
@@ -5536,6 +5593,9 @@
                                   <rd:DefaultName>daily_revenue_3</rd:DefaultName>
                                   <ZIndex>12</ZIndex>
                                   <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
                                     <TopBorder>
                                       <Style>Solid</Style>
                                     </TopBorder>
@@ -5924,7 +5984,7 @@
       <DataType>Integer</DataType>
       <DefaultValue>
         <Values>
-          <Value>1305</Value>
+          <Value>1363</Value>
         </Values>
       </DefaultValue>
       <Prompt>Season</Prompt>
@@ -5935,7 +5995,7 @@
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value>59477</Value>
+          <Value>61779</Value>
         </Values>
       </DefaultValue>
       <Prompt>Production Season</Prompt>
@@ -5945,7 +6005,7 @@
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>09/08/2018 00:00:00</Value>
+          <Value>1/24/2019 12:00:00 AM</Value>
         </Values>
       </DefaultValue>
       <Prompt>Calculation Date</Prompt>
@@ -5954,6 +6014,11 @@
     <ReportParameter Name="price_category">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>1,8</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>price category</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>

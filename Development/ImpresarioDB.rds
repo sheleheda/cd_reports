@@ -2,7 +2,7 @@
 <RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ImpresarioDB">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=BLINDFAITH.tessitura.cd.local;Initial Catalog=impresario;MultipleActiveResultSets=True</ConnectString>
+    <ConnectString>Data Source=KRONOS.tessitura.cd.local;Initial Catalog=impresario;MultipleActiveResultSets=True</ConnectString>
   </ConnectionProperties>
   <DataSourceID>1dc51299-9144-444b-a7ee-0f504cf1e5ca</DataSourceID>
 </RptDataSource>

@@ -132,6 +132,54 @@
           <DataField>ret_pur</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="ret_seats_total">
+          <DataField>ret_seats_total</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ret_amount_total">
+          <DataField>ret_amount_total</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ret_orders_total">
+          <DataField>ret_orders_total</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="pur_seats_total">
+          <DataField>pur_seats_total</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="pur_amount_total">
+          <DataField>pur_amount_total</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="pur_orders_total">
+          <DataField>pur_orders_total</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ret_seats_gt">
+          <DataField>ret_seats_gt</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ret_amount_gt">
+          <DataField>ret_amount_gt</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ret_orders_gt">
+          <DataField>ret_orders_gt</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="pur_seats_gt">
+          <DataField>pur_seats_gt</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="pur_amount_gt">
+          <DataField>pur_amount_gt</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="pur_orders_gt">
+          <DataField>pur_orders_gt</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
     </DataSet>
   </DataSets>
@@ -148,6 +196,7 @@
             </Parameters>
             <MergeTransactions>true</MergeTransactions>
             <Top>0.04167in</Top>
+            <Left>0.01042in</Left>
             <Height>0.22917in</Height>
             <Width>9.80903in</Width>
             <Visibility>
@@ -831,7 +880,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox7">
+                        <Textbox Name="season">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -849,7 +898,6 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox7</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1125,7 +1173,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox307">
+                        <Textbox Name="performance">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1143,7 +1191,6 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox307</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1168,7 +1215,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=sum(Fields!ret_seats.Value)</Value>
+                                  <Value>=max(Fields!ret_seats_total.Value)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1176,6 +1223,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1197,7 +1245,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=sum(Fields!ret_amount.Value)</Value>
+                                  <Value>=min(Fields!ret_amount_total.Value)</Value>
                                   <Style>
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
                                   </Style>
@@ -1207,6 +1255,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox36</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1229,7 +1278,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(sum(Fields!ret_seats.Value)=0, 0, count(Fields!ret_orders.Value))</Value>
+                                  <Value>=max(Fields!ret_orders_total.Value)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1237,6 +1286,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ret_seats</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1287,7 +1337,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=sum(Fields!pur_seats.Value)</Value>
+                                  <Value>=iif(Fields!ret_pur.Value=1, 0, max(Fields!pur_seats_total.Value))</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1295,6 +1345,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox78</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1316,7 +1367,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=sum(Fields!pur_amount.Value)</Value>
+                                  <Value>=iif(Fields!ret_pur.Value=1, 0, max(Fields!pur_amount_total.Value))</Value>
                                   <Style>
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
                                   </Style>
@@ -1326,6 +1377,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox83</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1348,7 +1400,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(sum(Fields!pur_seats.Value)=0, 0, count(Fields!pur_seats.Value))</Value>
+                                  <Value>=iif(Fields!ret_pur.Value=1, 0, max(Fields!pur_orders_total.Value))</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1356,6 +1408,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox88</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1796,7 +1849,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox4">
+                        <Textbox Name="order_no">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1820,7 +1873,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox4</rd:DefaultName>
                           <ActionInfo>
                             <Actions>
                               <Action>
@@ -1842,7 +1894,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox6">
+                        <Textbox Name="customer_no">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1860,7 +1912,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox6</rd:DefaultName>
                           <ActionInfo>
                             <Actions>
                               <Action>
@@ -1882,7 +1933,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox62">
+                        <Textbox Name="sort_name">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1898,7 +1949,6 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox62</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1915,7 +1965,7 @@
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox131">
+                        <Textbox Name="seat_count">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1933,7 +1983,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox27</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1948,7 +1997,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox132">
+                        <Textbox Name="amount">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1967,7 +2016,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox32</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2145,7 +2193,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox97">
+                        <Textbox Name="Textbox1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -2159,7 +2207,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox97</rd:DefaultName>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2186,7 +2234,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ret_seats.Value)</Value>
+                                  <Value>=max(Fields!ret_seats_total.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>Blue</Color>
@@ -2197,6 +2245,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2223,7 +2272,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ret_amount.Value)</Value>
+                                  <Value>=min(Fields!ret_amount_total.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
@@ -2235,6 +2284,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox36</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2261,7 +2311,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(Sum(Fields!ret_seats.Value) = 0, 0, Count(Fields!ret_orders.Value))</Value>
+                                  <Value>=max(Fields!ret_orders_total.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>Blue</Color>
@@ -2272,6 +2322,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ret_seats</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2333,7 +2384,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!pur_seats.Value)</Value>
+                                  <Value>=iif(Fields!ret_pur.Value=1, 0, max(Fields!pur_seats_total.Value))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>Blue</Color>
@@ -2344,6 +2395,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox78</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2369,7 +2421,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!pur_amount.Value)</Value>
+                                  <Value>=iif(Fields!ret_pur.Value=1, 0, max(Fields!pur_amount_total.Value))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
@@ -2381,6 +2433,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox83</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2407,7 +2460,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(Sum(Fields!pur_seats.Value) = 0, 0, Count(Fields!pur_seats.Value))</Value>
+                                  <Value>=iif(Fields!ret_pur.Value=1, 0, max(Fields!pur_orders_total.Value))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>Blue</Color>
@@ -2418,6 +2471,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox88</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2566,7 +2620,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ret_seats.Value)</Value>
+                                  <Value>=max(Fields!ret_seats_gt.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>Blue</Color>
@@ -2577,6 +2631,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2598,7 +2653,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ret_amount.Value)</Value>
+                                  <Value>=min(Fields!ret_amount_gt.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
@@ -2610,6 +2665,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox36</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2625,14 +2681,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ret_seats2">
+                        <Textbox Name="ret_seats4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(Sum(Fields!ret_seats.Value) = 0, 0, Count(Fields!ret_orders.Value))</Value>
+                                  <Value>=max(Fields!ret_orders_gt.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>Blue</Color>
@@ -2643,10 +2699,15 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ret_seats</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <TopBorder>
+                              <Color>Gray</Color>
+                              <Style>Solid</Style>
+                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2696,7 +2757,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!pur_seats.Value)</Value>
+                                  <Value>=max(Fields!pur_seats_gt.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>Blue</Color>
@@ -2707,6 +2768,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox78</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2728,7 +2790,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!pur_amount.Value)</Value>
+                                  <Value>=max(Fields!pur_amount_gt.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
@@ -2740,6 +2802,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox83</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2755,14 +2818,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox98">
+                        <Textbox Name="Textbox103">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(Sum(Fields!pur_seats.Value) = 0, 0, Count(Fields!pur_seats.Value))</Value>
+                                  <Value>=max(Fields!pur_orders_gt.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>Blue</Color>
@@ -2773,10 +2836,15 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox88</rd:DefaultName>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <TopBorder>
+                              <Color>Gray</Color>
+                              <Style>Solid</Style>
+                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2811,7 +2879,7 @@
                 <TablixMember>
                   <Group Name="GroupBy_GroupDesc_PerfCode">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!group_desc.Value</GroupExpression>
+                      <GroupExpression>=iif(Parameters!grouping.Value=1, Fields!group_desc.Value, Fields!group_desc.Value &amp; "   " &amp; Fields!perf_code.Value &amp; "   " &amp; Fields!perf_dt.Value)</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
@@ -2821,6 +2889,9 @@
                     </SortExpression>
                     <SortExpression>
                       <Value>=Fields!group_desc.Value</Value>
+                    </SortExpression>
+                    <SortExpression>
+                      <Value>=Fields!perf_dt.Value</Value>
                     </SortExpression>
                     <SortExpression>
                       <Value>=Fields!perf_code.Value</Value>
@@ -2840,7 +2911,18 @@
                       <KeepWithGroup>After</KeepWithGroup>
                     </TablixMember>
                     <TablixMember>
-                      <Group Name="Details" />
+                      <Group Name="Details">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!perf_no.Value</GroupExpression>
+                          <GroupExpression>=Fields!order_no.Value</GroupExpression>
+                          <GroupExpression>=Fields!customer_no.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!sort_name.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
                       <Visibility>
                         <Hidden>=iif(Parameters!detail.Value=2, true, false)</Hidden>
                       </Visibility>
@@ -2868,7 +2950,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.90292in</Height>
+        <Height>2.67375in</Height>
         <Style />
       </Body>
       <Width>9.95486in</Width>
@@ -3062,7 +3144,7 @@
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>58245</Value>
+          <Value>58249</Value>
         </Values>
       </DefaultValue>
       <Prompt>prod season str</Prompt>
@@ -3078,7 +3160,7 @@
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>1/1/2017 12:00:00 AM</Value>
+          <Value>1/29/2019 12:00:00 AM</Value>
         </Values>
       </DefaultValue>
       <Prompt>perf start dt</Prompt>
@@ -3088,7 +3170,7 @@
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>10/28/2018 12:00:00 AM</Value>
+          <Value>01/31/2019 00:00:00</Value>
         </Values>
       </DefaultValue>
       <Prompt>perf end dt</Prompt>
@@ -3099,7 +3181,7 @@
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value>265</Value>
+          <Value>27</Value>
         </Values>
       </DefaultValue>
       <Prompt>mos str</Prompt>
@@ -3139,6 +3221,11 @@
     <ReportParameter Name="list_no">
       <DataType>Integer</DataType>
       <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>187690</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>list no</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>

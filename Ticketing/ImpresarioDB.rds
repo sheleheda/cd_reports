@@ -2,8 +2,7 @@
 <RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ImpresarioDB">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=duff.tessitura.cd.local\dev;Initial Catalog=impresario;MultipleActiveResultSets=True</ConnectString>
-    <IntegratedSecurity>true</IntegratedSecurity>
+    <ConnectString>Data Source=duff.tessitura.cd.local\test;Initial Catalog=impresario;MultipleActiveResultSets=True</ConnectString>
   </ConnectionProperties>
   <DataSourceID>428c22c8-cdd3-422f-a8e8-e3939f936a1e</DataSourceID>
 </RptDataSource>

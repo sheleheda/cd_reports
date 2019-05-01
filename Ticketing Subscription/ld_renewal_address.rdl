@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="ImpresarioDB">
@@ -203,6 +203,7 @@
                                 <TextRun>
                                   <Value>=Fields!h_customer_no.Value</Value>
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -242,6 +243,7 @@
                                 <TextRun>
                                   <Value>=Fields!h_customer_name.Value</Value>
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -281,6 +283,7 @@
                                 <TextRun>
                                   <Value>=Fields!h_cust_addr2.Value</Value>
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -320,6 +323,7 @@
                                 <TextRun>
                                   <Value>=Fields!h_cust_addr1.Value</Value>
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -359,6 +363,7 @@
                                 <TextRun>
                                   <Value>=Fields!h_cust_city.Value &amp; ", " &amp; Fields!h_cust_state.Value &amp; " " &amp; Fields!h_cust_zip.Value</Value>
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -397,7 +402,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Verdana</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -435,6 +443,7 @@
                                 <TextRun>
                                   <Value>=Fields!h_day_phone.Value</Value>
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -466,6 +475,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -497,6 +507,7 @@
                                 <TextRun>
                                   <Value>=Fields!h_evening_phone.Value</Value>
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -532,7 +543,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Verdana</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -570,6 +584,7 @@
                                 <TextRun>
                                   <Value>=Fields!h_cust_email.Value</Value>
                                   <Style>
+                                    <FontFamily>Verdana</FontFamily>
                                     <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -642,7 +657,7 @@
             </TablixRowHierarchy>
             <DataSetName>LP_GET_ONE_ADDRESS_HH_LOGIN</DataSetName>
             <Left>0.1875in</Left>
-            <Height>1.91666in</Height>
+            <Height>1.91665in</Height>
             <Width>3.05208in</Width>
             <Style>
               <Border>
@@ -730,6 +745,54 @@
       <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>8</NumberOfColumns>
+      <NumberOfRows>1</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>customer_no</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>mailing_dt</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>mailing_type</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>signer</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>4</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>label_ind</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>5</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>eaddress_type</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>6</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>eaddress_purpose</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>7</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>eaddress_market_ind</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
   <Code>Function GetTessituraLink(resource as String, id as Long) As String
 	If NOT Report.Globals!RenderFormat.IsInteractive Then 
 		RETURN Nothing

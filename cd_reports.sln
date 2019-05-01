@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "cd_reports", "cd_reports\cd_reports.rptproj", "{24858493-AEF8-43A0-8A8A-946E42FD2744}"
 EndProject
@@ -35,6 +35,8 @@ Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Membership", "Membership\Me
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Deprecated", "Deprecated\Deprecated.rptproj", "{BD0F5675-DB57-4A8C-9C3D-4A357F6943C8}"
 EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Lists and Output Sets", "Lists and Output Sets\Lists and Output Sets.rptproj", "{F7783C31-121B-46BC-93A0-E106E72A18EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Beta|Default = Beta|Default
@@ -66,9 +68,9 @@ Global
 		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Legacy|Default.ActiveCfg = Legacy
 		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Legacy|Default.Build.0 = Legacy
 		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Legacy|Default.Deploy.0 = Legacy
-		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release_AWS|Default.ActiveCfg = 
-		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release_AWS|Default.Build.0 = 
-		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release_AWS|Default.Deploy.0 = 
+		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release_AWS|Default.ActiveCfg = Release_AWS
+		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release_AWS|Default.Build.0 = Release_AWS
+		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release_AWS|Default.Deploy.0 = Release_AWS
 		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release|Default.ActiveCfg = Release
 		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release|Default.Build.0 = Release
 		{24858493-AEF8-43A0-8A8A-946E42FD2744}.Release|Default.Deploy.0 = Release
@@ -228,9 +230,9 @@ Global
 		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Legacy|Default.ActiveCfg = Legacy
 		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Legacy|Default.Build.0 = Legacy
 		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Legacy|Default.Deploy.0 = Legacy
-		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release_AWS|Default.ActiveCfg = 
-		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release_AWS|Default.Build.0 = 
-		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release_AWS|Default.Deploy.0 = 
+		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release_AWS|Default.ActiveCfg = Release_AWS
+		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release_AWS|Default.Build.0 = Release_AWS
+		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release_AWS|Default.Deploy.0 = Release_AWS
 		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release|Default.ActiveCfg = Release
 		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release|Default.Build.0 = Release
 		{3D9285B3-D639-4A20-B4F8-FDFA49E12E5F}.Release|Default.Deploy.0 = Release
@@ -475,65 +477,36 @@ Global
 		{BD0F5675-DB57-4A8C-9C3D-4A357F6943C8}.Test|Default.ActiveCfg = Release
 		{BD0F5675-DB57-4A8C-9C3D-4A357F6943C8}.Test|Default.Build.0 = Release
 		{BD0F5675-DB57-4A8C-9C3D-4A357F6943C8}.Test|Default.Deploy.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Beta|Default.ActiveCfg = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Beta|Default.Build.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Beta|Default.Deploy.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Beta2|Default.ActiveCfg = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Beta2|Default.Build.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Beta2|Default.Deploy.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Debug|Default.ActiveCfg = Debug
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Debug|Default.Build.0 = Debug
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Debug|Default.Deploy.0 = Debug
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.DebugLocal|Default.Build.0 = DebugLocal
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Dev|Default.ActiveCfg = DebugLocal
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Dev|Default.Build.0 = DebugLocal
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Legacy|Default.ActiveCfg = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Legacy|Default.Build.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Legacy|Default.Deploy.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Release_AWS|Default.ActiveCfg = Release_AWS
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Release_AWS|Default.Build.0 = Release_AWS
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Release_AWS|Default.Deploy.0 = Release_AWS
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Release|Default.ActiveCfg = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Release|Default.Build.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Release|Default.Deploy.0 = Release
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Test|Default.ActiveCfg = Test
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Test|Default.Build.0 = Test
+		{F7783C31-121B-46BC-93A0-E106E72A18EB}.Test|Default.Deploy.0 = Test
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB097D43-A44E-4899-81AD-133B3B8958A2}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 17
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://cultpitt15222.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Ticketing\u0020Proofing\\Ticketing\u0020Proofing.rptproj
-		SccProjectName1 = Ticketing\u0020Proofing
-		SccLocalPath1 = Ticketing\u0020Proofing
-		SccProjectUniqueName2 = Ticketing\u0020Subscription\\Ticketing\u0020Subscription.rptproj
-		SccProjectName2 = Ticketing\u0020Subscription
-		SccLocalPath2 = Ticketing\u0020Subscription
-		SccProjectUniqueName3 = Campaign\u0020and\u0020Appeal\\CampaignAppeal.rptproj
-		SccProjectName3 = Campaign\u0020and\u0020Appeal
-		SccLocalPath3 = Campaign\u0020and\u0020Appeal
-		SccProjectUniqueName4 = cd_reports\\cd_reports.rptproj
-		SccProjectName4 = cd_reports
-		SccLocalPath4 = cd_reports
-		SccProjectUniqueName5 = Common\\Common.rptproj
-		SccProjectName5 = Common
-		SccLocalPath5 = Common
-		SccProjectUniqueName6 = Customer\u0020Service\\Customer\u0020Service.rptproj
-		SccProjectName6 = Customer\u0020Service
-		SccLocalPath6 = Customer\u0020Service
-		SccProjectUniqueName7 = Data\u0020Management\\Data\u0020Management.rptproj
-		SccProjectName7 = Data\u0020Management
-		SccLocalPath7 = Data\u0020Management
-		SccProjectUniqueName8 = Development\\Development.rptproj
-		SccProjectName8 = Development
-		SccLocalPath8 = Development
-		SccProjectUniqueName9 = Finance\\Finance.rptproj
-		SccProjectName9 = Finance
-		SccLocalPath9 = Finance
-		SccProjectUniqueName10 = Labels\u0020and\u0020Letters\\Labels\u0020and\u0020Letters.rptproj
-		SccProjectName10 = Labels\u0020and\u0020Letters
-		SccLocalPath10 = Labels\u0020and\u0020Letters
-		SccProjectUniqueName11 = Membership\\Membership.rptproj
-		SccProjectName11 = Membership
-		SccLocalPath11 = Membership
-		SccProjectUniqueName12 = System\u0020Administration\\System\u0020Administration.rptproj
-		SccProjectName12 = System\u0020Administration
-		SccLocalPath12 = System\u0020Administration
-		SccProjectUniqueName13 = Ticketing\\Ticketing\u0020Box\u0020Office.rptproj
-		SccProjectName13 = Ticketing
-		SccLocalPath13 = Ticketing
-		SccProjectUniqueName14 = ..\\Holly\\Tessitura\\cd_reports\\NScan\\NScan.rptproj
-		SccProjectName14 = ../Holly/Tessitura/cd_reports/NScan
-		SccLocalPath14 = ..\\Holly\\Tessitura\\cd_reports\\NScan
-		SccProjectUniqueName15 = ..\\..\\SSRS\u0020Reports\\CD_SSRS_Reports.rptproj
-		SccProjectName15 = SSRS\u0020Reports
-		SccLocalPath15 = ..\\..\\SSRS\u0020Reports
-		SccProjectUniqueName16 = Deprecated\\Deprecated.rptproj
-		SccProjectName16 = Deprecated
-		SccLocalPath16 = Deprecated
 	EndGlobalSection
 EndGlobal

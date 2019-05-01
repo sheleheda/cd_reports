@@ -375,7 +375,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -5733,7 +5732,7 @@
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>12678</Value>
+          <Value>0</Value>
         </Values>
       </DefaultValue>
       <Prompt>appeal no</Prompt>
