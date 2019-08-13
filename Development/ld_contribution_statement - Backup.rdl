@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ImpresarioDB">
-      <DataSourceReference>ImpresarioDB</DataSourceReference>
+    <DataSource Name="TessituraDB">
+      <DataSourceReference>TessituraDB</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>4134e7a8-a091-4281-8e6f-6b7dc193afbf</rd:DataSourceID>
+      <rd:DataSourceID>b7cb9a2e-b92c-4cde-963d-1eed86cfa91f</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="SetSecurityContext">
       <Query>
-        <DataSourceName>ImpresarioDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@UserId">
-            <Value>=Parameters!UserId.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@UserGroup">
-            <Value>=Parameters!UserGroup.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
+        <DataSourceName>TessituraDB</DataSourceName>
         <CommandText>EXEC AP_SET_SESSION_CONTEXT @UserId, @UserGroup</CommandText>
       </Query>
     </DataSet>
     <DataSet Name="LRP_CONTRIBUTION_STATEMENT_BIO">
       <Query>
-        <DataSourceName>ImpresarioDB</DataSourceName>
+        <DataSourceName>TessituraDB</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@customer_no">
             <Value>=Parameters!customer_no.Value</Value>
@@ -94,7 +86,7 @@
     </DataSet>
     <DataSet Name="LRP_CONTRIBUTION_STATEMENT_GIFTS">
       <Query>
-        <DataSourceName>ImpresarioDB</DataSourceName>
+        <DataSourceName>TessituraDB</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@customer_no">
             <Value>=Parameters!customer_no.Value</Value>
@@ -189,7 +181,7 @@
     </DataSet>
     <DataSet Name="LRP_CONTRIBUTION_STATEMENT_EVENTS">
       <Query>
-        <DataSourceName>ImpresarioDB</DataSourceName>
+        <DataSourceName>TessituraDB</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@customer_no">
             <Value>=Parameters!customer_no.Value</Value>
@@ -261,7 +253,7 @@
     </DataSet>
     <DataSet Name="LRP_CONTRIBUTION_STATEMENT_SOFTCREDITS">
       <Query>
-        <DataSourceName>ImpresarioDB</DataSourceName>
+        <DataSourceName>TessituraDB</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@customer_no">
             <Value>=Parameters!customer_no.Value</Value>
@@ -6258,59 +6250,6 @@
       <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>8</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-      <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>UserGroup</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>UserId</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>CompanyName</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>RequestId</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>4</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>customer_no</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>5</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>list_no</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>6</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>start_dt</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>7</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>end_dt</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>date_type</ParameterName>
-        </CellDefinition>
-      </CellDefinitions>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Function GetTessituraLink(resource as String, id as Long) As String
 	If NOT Report.Globals!RenderFormat.IsInteractive Then 
 		RETURN Nothing

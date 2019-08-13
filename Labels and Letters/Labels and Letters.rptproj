@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="Windows-1252"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <FullPath>Debug</FullPath>
     <OutputPath>bin\Debug</OutputPath>
@@ -33,12 +33,12 @@
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform />
     <TargetReportFolder>cd_reports/Labels and Letters</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
-    <TargetServerURL>http://duff.tessitura.cd.local/ReportServer_Test</TargetServerURL>
+    <TargetServerURL>http://duff/ReportServer_Test</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Beta' ">
     <FullPath>Beta</FullPath>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="Windows-1252"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <FullPath>Debug</FullPath>
     <OutputPath>bin\Debug</OutputPath>
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
     <TargetReportFolder>cd_reports/Membership</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://duff.tessitura.cd.local/reportserver_dev</TargetServerURL>
+    <TargetServerURL>http://duff/reportserver_dev</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DebugLocal' ">
     <FullPath>DebugLocal</FullPath>
@@ -33,13 +33,13 @@
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
     <TargetReportFolder>cd_reports/Membership</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://v-strongbow.tessitura.cd.local/reportserver</TargetServerURL>
+    <TargetServerURL>http://hermes/reportserver</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Test' ">
     <FullPath>Test</FullPath>
@@ -47,13 +47,13 @@
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform />
     <TargetReportFolder>cd_reports/Membership</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://duff.tessitura.cd.local/reportserver_test</TargetServerURL>
+    <TargetServerURL>http://duff/reportserver_test</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release_AWS' ">
     <FullPath>Release_AWS</FullPath>

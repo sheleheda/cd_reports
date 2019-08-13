@@ -859,7 +859,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=SUM(Fields!unpaid_tkts.Value) + SUM(Fields!paid_tkts.Value) / Sum(Fields!capacity.Value)</Value>
+                                  <Value>=iif(Sum(Fields!capacity.Value)=0, 0, SUM(Fields!unpaid_tkts.Value) + SUM(Fields!paid_tkts.Value) / Sum(Fields!capacity.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -932,7 +932,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(SUM(Fields!unpaid_tkts.Value) + SUM(Fields!paid_tkts.Value) + SUM(Fields!comps.Value)) / Sum(Fields!capacity.Value)</Value>
+                                  <Value>=Iif(Sum(Fields!capacity.Value)=0, 0, (SUM(Fields!unpaid_tkts.Value) + SUM(Fields!paid_tkts.Value) + SUM(Fields!comps.Value)) / Sum(Fields!capacity.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -1015,7 +1015,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(MAX(Fields!attendance.Value) + Max(Fields!attendance_comps.Value))  / Sum(Fields!capacity.Value)</Value>
+                                  <Value>=iif(Sum(Fields!capacity.Value)=0, 0, (MAX(Fields!attendance.Value) + Max(Fields!attendance_comps.Value))  / Sum(Fields!capacity.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -1961,7 +1961,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=SUM(Fields!gross_sales.Value) / SUM(Fields!paid_tkts.Value)</Value>
+                                  <Value>=iif(SUM(Fields!paid_tkts.Value)=0, 0, SUM(Fields!gross_sales.Value) / SUM(Fields!paid_tkts.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>'$'0.00;('$'0.00)</Format>
@@ -2041,7 +2041,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=SUM(Fields!gross_sales.Value) / (SUM(Fields!paid_tkts.Value) + SUM(Fields!comps.Value))</Value>
+                                  <Value>=iif((SUM(Fields!paid_tkts.Value) + SUM(Fields!comps.Value))=0, 0, SUM(Fields!gross_sales.Value) / (SUM(Fields!paid_tkts.Value) + SUM(Fields!comps.Value)))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>'$'0.00;('$'0.00)</Format>
@@ -2121,7 +2121,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(SUM(Fields!gross_sales.Value) - Fields!mkt_expense_tkt.Value - Fields!mkt_expense_sub.Value) / (SUM(Fields!paid_tkts.Value) + SUM(Fields!comps.Value))</Value>
+                                  <Value>=iif((SUM(Fields!paid_tkts.Value) + SUM(Fields!comps.Value))=0, 0, (SUM(Fields!gross_sales.Value) - Fields!mkt_expense_tkt.Value - Fields!mkt_expense_sub.Value) / (SUM(Fields!paid_tkts.Value) + SUM(Fields!comps.Value)))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>'$'0.00;('$'0.00)</Format>
@@ -3394,7 +3394,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=max(Fields!noshow.Value) / sum(Fields!paid_tkts.Value)</Value>
+                                  <Value>=iif(sum(Fields!paid_tkts.Value)=0,0,max(Fields!noshow.Value) / sum(Fields!paid_tkts.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -3542,7 +3542,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=max(Fields!noshow_comps.Value) / sum(Fields!comps.Value)</Value>
+                                  <Value>=iif(sum(Fields!comps.Value)=0,0,max(Fields!noshow_comps.Value) / sum(Fields!comps.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -3690,7 +3690,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>= (max(Fields!noshow.Value) + max(Fields!noshow_comps.Value)) / (sum(Fields!paid_tkts.Value) + sum(Fields!comps.Value))</Value>
+                                  <Value>= iif((sum(Fields!paid_tkts.Value) + sum(Fields!comps.Value))=0,0,(max(Fields!noshow.Value) + max(Fields!noshow_comps.Value)) / (sum(Fields!paid_tkts.Value) + sum(Fields!comps.Value)))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -4371,7 +4371,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!o_total_hh.Value / (Fields!total_hh_sold.Value + Fields!total_hh_comp.Value)</Value>
+                                  <Value>=iif((Fields!total_hh_sold.Value + Fields!total_hh_comp.Value)=0,0,Fields!o_total_hh.Value / (Fields!total_hh_sold.Value + Fields!total_hh_comp.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -5013,7 +5013,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!p_total_paid.Value / Fields!p_total_tkts.Value</Value>
+                                  <Value>=iif(Fields!p_total_tkts.Value=0,0,(Fields!p_total_paid.Value / iif(Fields!p_total_tkts.Value=0,1,Fields!p_total_tkts.Value)))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>'$'0.00;('$'0.00)</Format>
@@ -5046,7 +5046,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!p_total_hh.Value / (Fields!total_hh_sold.Value + Fields!total_hh_comp.Value)</Value>
+                                  <Value>=iif((Fields!total_hh_sold.Value + Fields!total_hh_comp.Value)=0,0,Fields!p_total_hh.Value / (Fields!total_hh_sold.Value + Fields!total_hh_comp.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -5605,7 +5605,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!f_customer.Value</Value>
+                                  <Value>=iif(isnothing(Fields!f_customer.Value), 0, Fields!f_customer.Value)</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0;(#,0)</Format>
@@ -5638,7 +5638,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!f_tickets.Value</Value>
+                                  <Value>=iif(isnothing(Fields!f_tickets.Value), 0, Fields!f_tickets.Value)</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0;(#,0)</Format>
@@ -5671,7 +5671,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!f_customer.Value / Fields!f_total_custs.Value</Value>
+                                  <Value>=iif(Fields!f_total_custs.Value=0,0,Fields!f_customer.Value / Fields!f_total_custs.Value)</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -5742,7 +5742,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!f_customer_12.Value</Value>
+                                  <Value>=iif(isnothing(Fields!f_customer_12.Value), 0, Fields!f_customer_12.Value)</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0;(#,0)</Format>
@@ -5775,7 +5775,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!f_tickets_12.Value</Value>
+                                  <Value>=iif(isnothing(Fields!f_tickets_12.Value), 0, Fields!f_tickets_12.Value)</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0;(#,0)</Format>
@@ -5808,7 +5808,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!f_customer_12.Value / Fields!f_total_custs_12.Value</Value>
+                                  <Value>=iif(Fields!f_total_custs_12.Value=0,0,Fields!f_customer_12.Value / Fields!f_total_custs_12.Value)</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>0.00%</Format>
@@ -6048,7 +6048,7 @@
       <DataType>Integer</DataType>
       <DefaultValue>
         <Values>
-          <Value>1305</Value>
+          <Value>1310</Value>
         </Values>
       </DefaultValue>
       <Prompt>season no</Prompt>
@@ -6058,7 +6058,7 @@
       <DataType>Integer</DataType>
       <DefaultValue>
         <Values>
-          <Value>58249</Value>
+          <Value>61330</Value>
         </Values>
       </DefaultValue>
       <Prompt>prod season no</Prompt>

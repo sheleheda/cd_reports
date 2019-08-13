@@ -246,7 +246,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -288,11 +287,11 @@
                           <CustomProperties>
                             <CustomProperty>
                               <Name>LicenseOwner</Name>
-                              <Value />
+                              <Value>The Pittsburgh Cultural Trust-Ultimate Edition-Team License</Value>
                             </CustomProperty>
                             <CustomProperty>
                               <Name>LicenseKey</Name>
-                              <Value />
+                              <Value>LKDP75CZVE22MJXN5ZKXWCNR3KTYPGGRRQWGFGKG94985ADYUR4A</Value>
                             </CustomProperty>
                             <CustomProperty>
                               <Name>AutoSize</Name>
@@ -857,11 +856,13 @@
                               <Style>None</Style>
                             </Border>
                             <BackgroundColor>White</BackgroundColor>
+                            <FontFamily />
                             <FontSize>8pt</FontSize>
                             <TextAlign>Center</TextAlign>
                             <VerticalAlign>Top</VerticalAlign>
                           </Style>
                         </CustomReportItem>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -871,11 +872,11 @@
                           <CustomProperties>
                             <CustomProperty>
                               <Name>LicenseOwner</Name>
-                              <Value />
+                              <Value>The Pittsburgh Cultural Trust-Ultimate Edition-Team License</Value>
                             </CustomProperty>
                             <CustomProperty>
                               <Name>LicenseKey</Name>
-                              <Value />
+                              <Value>LKDP75CZVE22MJXN5ZKXWCNR3KTYPGGRRQWGFGKG94985ADYUR4A</Value>
                             </CustomProperty>
                             <CustomProperty>
                               <Name>AutoSize</Name>
@@ -1439,6 +1440,7 @@
                               <Style>None</Style>
                             </Border>
                             <BackgroundColor>White</BackgroundColor>
+                            <FontFamily />
                             <FontSize>8pt</FontSize>
                             <TextAlign>Center</TextAlign>
                             <VerticalAlign>Top</VerticalAlign>
@@ -1494,7 +1496,7 @@
       <Width>6.95486in</Width>
       <Page>
         <PageHeader>
-          <Height>0.60625in</Height>
+          <Height>0.33542in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1505,7 +1507,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>CD Scan a Customer</Value>
+                      <Value>CD Scan a Constituent</Value>
                       <Style>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>12pt</FontSize>
@@ -1633,7 +1635,7 @@
       <DataType>Integer</DataType>
       <DefaultValue>
         <Values>
-          <Value>2</Value>
+          <Value>1</Value>
         </Values>
       </DefaultValue>
       <Prompt>barcode_type</Prompt>

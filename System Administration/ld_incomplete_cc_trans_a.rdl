@@ -104,13 +104,13 @@
                   <Width>1.73611in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.63889in</Width>
+                  <Width>0.84722in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.16667in</Width>
+                  <Width>1.37499in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.86806in</Width>
+                  <Width>1.03473in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.76389in</Width>
@@ -125,7 +125,7 @@
                   <Width>0.625in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25in</Width>
+                  <Width>1.43056in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -547,12 +547,6 @@
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
-                                <TextRun>
-                                  <Value>S</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
@@ -896,6 +890,7 @@
                                   <Value>=Fields!amount.Value</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>0.00;(0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1150,7 +1145,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Constant">Fields!MerchantName.Value &amp; " Sub Total: "</Value>
+                                  <Value>=Fields!MerchantName.Value &amp; " Sub Total: "</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1195,6 +1190,7 @@
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>0.00;(0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1490,6 +1486,7 @@
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>0.00;(0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1687,7 +1684,7 @@
             <Top>0.11333in</Top>
             <Left>0.05083in</Left>
             <Height>1.25in</Height>
-            <Width>10.93056in</Width>
+            <Width>11.69445in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1698,13 +1695,16 @@
         <Height>1.48833in</Height>
         <Style />
       </Body>
-      <Width>11.07861in</Width>
+      <Width>11.91194in</Width>
       <Page>
-        <PageWidth>8.27in</PageWidth>
-        <LeftMargin>0.5in</LeftMargin>
-        <RightMargin>0.5in</RightMargin>
-        <TopMargin>0.5in</TopMargin>
-        <BottomMargin>0.5in</BottomMargin>
+        <PageHeight>8.5in</PageHeight>
+        <PageWidth>14in</PageWidth>
+        <InteractiveHeight>8.5in</InteractiveHeight>
+        <InteractiveWidth>14in</InteractiveWidth>
+        <LeftMargin>0.2in</LeftMargin>
+        <RightMargin>0.2in</RightMargin>
+        <TopMargin>0.2in</TopMargin>
+        <BottomMargin>0.2in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>

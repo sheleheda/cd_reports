@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="Windows-1252"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <FullPath>Debug</FullPath>
     <OutputPath>bin\Debug</OutputPath>
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
     <TargetReportFolder>cd_reports/Ticketing Box Office</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://duff.tessitura.cd.local/ReportServer_DEV</TargetServerURL>
+    <TargetServerURL>http://duff/ReportServer_DEV</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <FullPath>Release</FullPath>
@@ -20,13 +20,13 @@
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
     <TargetReportFolder>cd_reports/Ticketing Box Office</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://v-strongbow.tessitura.cd.local/ReportServer</TargetServerURL>
+    <TargetServerURL>http://hermes.tessitura.cd.local/ReportServer</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Test' ">
     <FullPath>Test</FullPath>
@@ -34,13 +34,13 @@
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform />
     <TargetReportFolder>cd_reports/Ticketing Box Office</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://duff.tessitura.cd.local/ReportServer_test</TargetServerURL>
+    <TargetServerURL>http://duff/ReportServer_test</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Beta' ">
     <FullPath>Beta</FullPath>
@@ -68,7 +68,7 @@
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://oberon.tessitura.cd.local/ReportServer</TargetServerURL>
+    <TargetServerURL>http://v-strongbow.tessitura.cd.local/ReportServer</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release_AWS' ">
     <FullPath>Release_AWS</FullPath>
@@ -108,7 +108,7 @@
     <Report Include="ld_house_report.rdl" />
     <Report Include="ld_internet_orders.rdl" />
     <Report Include="ld_order_sch_pmt.rdl" />
-    <Report Include="ld_payments_by_performance_SSRS.rdl" />
+    <Report Include="ld_payments_by_performance.rdl" />
     <Report Include="ld_payment_by_perf_detail.rdl" />
     <Report Include="ld_perf_audit_by_pt_category.rdl" />
     <Report Include="ld_perf_audit_price_cat.rdl" />
