@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ImpresarioDB">
+    <DataSource Name="Live">
+      <Transaction>true</Transaction>
       <DataSourceReference>ImpresarioDB</DataSourceReference>
-      <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>823bee41-e4f4-41ca-b2ee-daacf0fd881a</rd:DataSourceID>
+      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:DataSourceID>07b1cff0-ae94-4001-bd56-9bed00acc6a2</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="SetSecurityContext">
       <Query>
-        <DataSourceName>ImpresarioDB</DataSourceName>
+        <DataSourceName>Live</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@UserId">
             <Value>=Parameters!UserId.Value</Value>
@@ -25,7 +26,7 @@
     </DataSet>
     <DataSet Name="LRP_DAILY_SALES_BY_MOS_CAT_V6">
       <Query>
-        <DataSourceName>ImpresarioDB</DataSourceName>
+        <DataSourceName>Live</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@season_str">
             <Value>=Parameters!season_str.Value</Value>
@@ -11343,109 +11344,6 @@
       <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>8</NumberOfColumns>
-      <NumberOfRows>3</NumberOfRows>
-      <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>UserGroup</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>UserId</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>CompanyName</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>RequestId</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>4</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>season_str</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>5</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>prod_season_str</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>6</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>perf_str</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>7</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>perf_start_dt</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>perf_end_dt</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>price_cat_str</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>sale_start_dt</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>sale_end_dt</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>4</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>mos_cat_str</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>5</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>grouping</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>6</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>include_comps</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>7</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>include_perfs_with_no_sales</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>rpt_title</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>validate_sales</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>show_param</ParameterName>
-        </CellDefinition>
-      </CellDefinitions>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Function GetTessituraLink(resource as String, id as Long) As String
 	If NOT Report.Globals!RenderFormat.IsInteractive Then 
 		RETURN Nothing

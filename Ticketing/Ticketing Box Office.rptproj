@@ -104,6 +104,7 @@
     <Report Include="ld_executive_sales_past.rdl" />
     <Report Include="ld_gift_certificate.rdl" />
     <Report Include="ld_grp_order_listing.rdl" />
+    <Report Include="ld_heat_map.rdl" />
     <Report Include="ld_hold_code.rdl" />
     <Report Include="ld_house_report.rdl" />
     <Report Include="ld_internet_orders.rdl" />
@@ -135,6 +136,8 @@
     <Report Include="ld_ss_sales_by_advertiser.rdl" />
     <Report Include="ld_ss_sales_by_org.rdl" />
     <Report Include="ld_wheelchair_report.rdl" />
+    <Report Include="ld_zone_price.rdl" />
+    <Report Include="TessituraReportTemplate.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

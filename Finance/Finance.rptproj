@@ -111,6 +111,7 @@
     <Report Include="ld_dist_fee.rdl" />
     <Report Include="ld_EPSCompare.rdl" />
     <Report Include="ld_finance_import_by_posting_ps.rdl" />
+    <Report Include="ld_finance_import_by_post_op.rdl" />
     <Report Include="ld_fund_activity.rdl" />
     <Report Include="ld_gift_certificate_activity.rdl" />
     <Report Include="ld_gift_trans_detail_SSRS.rdl" />

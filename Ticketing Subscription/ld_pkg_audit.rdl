@@ -3,17 +3,16 @@
   <Author>NWigham</Author>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="Live">
-      <Transaction>true</Transaction>
+    <DataSource Name="ImpresarioDB">
       <DataSourceReference>ImpresarioDB</DataSourceReference>
-      <rd:SecurityType>Integrated</rd:SecurityType>
-      <rd:DataSourceID>07b1cff0-ae94-4001-bd56-9bed00acc6a2</rd:DataSourceID>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>382318a3-d5a8-4abe-9f02-800304962e18</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="SetSecurityContext">
       <Query>
-        <DataSourceName>Live</DataSourceName>
+        <DataSourceName>ImpresarioDB</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@UserId">
             <Value>=Parameters!UserId.Value</Value>
@@ -27,7 +26,7 @@
     </DataSet>
     <DataSet Name="LRP_PKG_AUDIT">
       <Query>
-        <DataSourceName>Live</DataSourceName>
+        <DataSourceName>ImpresarioDB</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@season">
             <Value>=Parameters!season.Value</Value>
@@ -7175,27 +7174,52 @@
   <ReportParameters>
     <ReportParameter Name="UserGroup">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Admin</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Usergroup</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="UserId">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>tshelehe</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>UserId</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="CompanyName">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CD</Value>
+        </Values>
+      </DefaultValue>
       <AllowBlank>true</AllowBlank>
       <Prompt>Company</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="RequestId">
       <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>100</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>RequestId</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="season">
       <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1370</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>season</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
@@ -7219,38 +7243,73 @@
     </ReportParameter>
     <ReportParameter Name="price_cat_str">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1,8</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>price cat str</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="order_start_dt">
       <DataType>DateTime</DataType>
       <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>11/19/2019 12:00:00 AM</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>order start dt</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="order_end_dt">
       <DataType>DateTime</DataType>
       <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>11/20/2019 12:00:00 AM</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>order end dt</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="split_pay">
       <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>split pay</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="seated_mode">
       <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>seated mode</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="paid_mode">
       <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>2</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>paid mode</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="grouping">
       <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>grouping</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>

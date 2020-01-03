@@ -3,10 +3,9 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="ImpresarioDB">
-      <Transaction>true</Transaction>
       <DataSourceReference>ImpresarioDB</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>07b1cff0-ae94-4001-bd56-9bed00acc6a2</rd:DataSourceID>
+      <rd:DataSourceID>82359d14-3ab9-4abd-9587-35bf05ad067a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -24,91 +23,87 @@
         <CommandText>EXEC AP_SET_SESSION_CONTEXT @UserId, @UserGroup</CommandText>
       </Query>
     </DataSet>
-    <DataSet Name="LRP_DCM_ENCORE_RENEWAL_PRICE_TYPES">
+    <DataSet Name="LP_HEAT_MAP">
       <Query>
         <DataSourceName>ImpresarioDB</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@season">
-            <Value>=Parameters!season.Value</Value>
+          <QueryParameter Name="@Season">
+            <Value>=Parameters!Season.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@list_no">
-            <Value>=Parameters!list_no.Value</Value>
+          <QueryParameter Name="@Perf_no">
+            <Value>=Parameters!Perf_no.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>LRP_DCM_ENCORE_RENEWAL_PRICE_TYPES</CommandText>
+        <CommandText>LP_HEAT_MAP</CommandText>
       </Query>
       <Fields>
-        <Field Name="renewal_id">
-          <DataField>renewal_id</DataField>
+        <Field Name="Perf_No">
+          <DataField>Perf_No</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="patron_id">
-          <DataField>patron_id</DataField>
+        <Field Name="Performance">
+          <DataField>Performance</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Zone">
+          <DataField>Zone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Row">
+          <DataField>Row</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Seat">
+          <DataField>Seat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Seat_no">
+          <DataField>Seat_no</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="sort_name">
-          <DataField>sort_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="renewal_count">
-          <DataField>renewal_count</DataField>
+        <Field Name="Zone_no">
+          <DataField>Zone_no</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="series">
-          <DataField>series</DataField>
+        <Field Name="Status">
+          <DataField>Status</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="section">
-          <DataField>section</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="row">
-          <DataField>row</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="seat_id">
-          <DataField>seat_id</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="renewal_exp_date">
-          <DataField>renewal_exp_date</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="origin_ly_sub">
-          <DataField>origin_ly_sub</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="season">
-          <DataField>season</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="sub_amt">
-          <DataField>sub_amt</DataField>
+        <Field Name="Paid_Amt">
+          <DataField>Paid Amt</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="seat_don">
-          <DataField>seat_don</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Order_dt">
+          <DataField>Order dt</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="sug_don">
-          <DataField>sug_don</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="discount">
-          <DataField>discount</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="series_id">
-          <DataField>series_id</DataField>
+        <Field Name="Price_Type">
+          <DataField>Price Type</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="price_type">
-          <DataField>price_type</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
+        <Field Name="Cust_No">
+          <DataField>Cust_No</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="price_type_desc">
-          <DataField>price_type_desc</DataField>
+        <Field Name="Order_No">
+          <DataField>Order_No</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Source_no">
+          <DataField>Source_no</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Allocation">
+          <DataField>Allocation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cust_name">
+          <DataField>Cust_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mbm_lvl">
+          <DataField>Mbm_lvl</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -127,140 +122,65 @@
             </Parameters>
             <MergeTransactions>true</MergeTransactions>
             <Top>0.04167in</Top>
+            <Left>0.38687in</Left>
             <Height>0.22917in</Height>
             <Width>7.16042in</Width>
-            <Visibility>
-              <Hidden>=IIf(Parameters!show_param.Value=2,TRUE,FALSE)</Hidden>
-            </Visibility>
-            <DataElementOutput>NoOutput</DataElementOutput>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Subreport>
-          <Tablix Name="Tablix1">
+          <Tablix Name="tbl_HeatMap">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.6875in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>1.0625in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.39784in</Width>
+                  <Width>1.36459in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.74374in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.61458in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.77083in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.66459in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.57292in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.71875in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.68333in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>1.20208in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.57292in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>0.54167in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40074in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.40074in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.40074in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.40074in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.40074in</Width>
+                  <Width>1in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.03125in</Height>
+                  <Height>0.25in</Height>
                   <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>renewal id</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>patron id</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox2">
@@ -270,8 +190,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>sort name</Value>
-                                  <Style />
+                                  <Value>Perf No</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -293,21 +216,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox5">
+                        <Textbox Name="Textbox4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>renewal count</Value>
-                                  <Style />
+                                  <Value>Performance</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -323,21 +249,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox7">
+                        <Textbox Name="Textbox6">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>series</Value>
-                                  <Style />
+                                  <Value>Zone</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -353,21 +282,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox9">
+                        <Textbox Name="Textbox8">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>section</Value>
-                                  <Style />
+                                  <Value>Row</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -383,21 +315,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox11">
+                        <Textbox Name="Textbox10">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>row</Value>
-                                  <Style />
+                                  <Value>Seat</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <rd:DefaultName>Textbox10</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -413,21 +348,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox13">
+                        <Textbox Name="Textbox12">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>seat id</Value>
-                                  <Style />
+                                  <Value>Seat no</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox13</rd:DefaultName>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -443,21 +381,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox15">
+                        <Textbox Name="Textbox14">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>renewal exp date</Value>
-                                  <Style />
+                                  <Value>Zone no</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox15</rd:DefaultName>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -473,21 +414,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox17">
+                        <Textbox Name="Textbox16">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>origin ly sub</Value>
-                                  <Style />
+                                  <Value>Status</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox17</rd:DefaultName>
+                          <rd:DefaultName>Textbox16</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -503,21 +447,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox19">
+                        <Textbox Name="Textbox18">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>season</Value>
-                                  <Style />
+                                  <Value>Paid Amt</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox19</rd:DefaultName>
+                          <rd:DefaultName>Textbox18</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -533,21 +480,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox21">
+                        <Textbox Name="Textbox20">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>sub amt</Value>
-                                  <Style />
+                                  <Value>Order dt</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox21</rd:DefaultName>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -570,8 +520,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>seat don</Value>
-                                  <Style />
+                                  <Value>Price Type</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -593,21 +546,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox25">
+                        <Textbox Name="Textbox26">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>sug don</Value>
-                                  <Style />
+                                  <Value>Cust No</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <rd:DefaultName>Textbox26</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -623,21 +579,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox27">
+                        <Textbox Name="Textbox34">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>discount</Value>
-                                  <Style />
+                                  <Value>Mbm lvl</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox27</rd:DefaultName>
+                          <rd:DefaultName>Textbox34</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -653,81 +612,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox29">
+                        <Textbox Name="Textbox36">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>series id</Value>
-                                  <Style />
+                                  <Value>Allocation</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox29</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox31">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>price type</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox31</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox33">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>price type desc</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox33</rd:DefaultName>
+                          <rd:DefaultName>Textbox36</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -744,25 +646,27 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.03125in</Height>
+                  <Height>0.25in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="renewal_id">
+                        <Textbox Name="Perf_No">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!renewal_id.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Perf_No.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>renewal_id</rd:DefaultName>
+                          <rd:DefaultName>Perf_No</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -778,21 +682,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="patron_id">
+                        <Textbox Name="Performance">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!patron_id.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Performance.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>patron_id</rd:DefaultName>
+                          <rd:DefaultName>Performance</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -808,21 +714,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="sort_name">
+                        <Textbox Name="Zone">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!sort_name.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Zone.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>sort_name</rd:DefaultName>
+                          <rd:DefaultName>Zone</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -838,21 +746,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="renewal_count">
+                        <Textbox Name="Row">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!renewal_count.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Row.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>renewal_count</rd:DefaultName>
+                          <rd:DefaultName>Row</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -868,21 +778,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="series">
+                        <Textbox Name="Seat">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!series.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Seat.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>series</rd:DefaultName>
+                          <rd:DefaultName>Seat</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -898,21 +810,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="section">
+                        <Textbox Name="Seat_no">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!section.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Seat_no.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>section</rd:DefaultName>
+                          <rd:DefaultName>Seat_no</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -928,21 +842,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="row">
+                        <Textbox Name="Zone_no">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!row.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Zone_no.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>row</rd:DefaultName>
+                          <rd:DefaultName>Zone_no</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -958,21 +874,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="seat_id">
+                        <Textbox Name="Status">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!seat_id.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Status.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>seat_id</rd:DefaultName>
+                          <rd:DefaultName>Status</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -988,21 +906,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="renewal_exp_date">
+                        <Textbox Name="Paid_Amt">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!renewal_exp_date.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Paid_Amt.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>renewal_exp_date</rd:DefaultName>
+                          <rd:DefaultName>Paid_Amt</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1018,21 +939,24 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="origin_ly_sub">
+                        <Textbox Name="Order_dt">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!origin_ly_sub.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Order_dt.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <Format>d</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>origin_ly_sub</rd:DefaultName>
+                          <rd:DefaultName>Order_dt</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1048,21 +972,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="season">
+                        <Textbox Name="Price_Type">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!season.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Price_Type.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>season</rd:DefaultName>
+                          <rd:DefaultName>Price_Type</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1078,21 +1004,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="sub_amt">
+                        <Textbox Name="Cust_No">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!sub_amt.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Cust_No.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>sub_amt</rd:DefaultName>
+                          <rd:DefaultName>Cust_No</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1108,21 +1036,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="seat_don">
+                        <Textbox Name="Mbm_lvl">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!seat_don.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Mbm_lvl.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>seat_don</rd:DefaultName>
+                          <rd:DefaultName>Mbm_lvl</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1138,141 +1068,23 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="sug_don">
+                        <Textbox Name="Allocation">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!sug_don.Value</Value>
-                                  <Style />
+                                  <Value>=Fields!Allocation.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>sug_don</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="discount">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!discount.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>discount</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="series_id">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!series_id.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>series_id</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="price_type">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!price_type.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>price_type</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="price_type_desc">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!price_type_desc.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>price_type_desc</rd:DefaultName>
+                          <rd:DefaultName>Allocation</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1306,10 +1118,6 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1322,87 +1130,53 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>LRP_DCM_ENCORE_RENEWAL_PRICE_TYPES</DataSetName>
-            <Top>0.29862in</Top>
-            <Height>0.0625in</Height>
-            <Width>7.21042in</Width>
+            <DataSetName>LP_HEAT_MAP</DataSetName>
+            <Top>0.43764in</Top>
+            <Left>0.39729in</Left>
+            <Height>0.5in</Height>
+            <Width>11.2in</Width>
             <ZIndex>1</ZIndex>
-            <Visibility>
-              <Hidden>true</Hidden>
-            </Visibility>
-            <DataElementOutput>Output</DataElementOutput>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <FontSize>8pt</FontSize>
             </Style>
           </Tablix>
-          <Textbox Name="Textbox35">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value> Your data is ready to save.</Value>
-                    <Style>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox35</rd:DefaultName>
-            <Top>0.43056in</Top>
-            <Left>0.14111in</Left>
-            <Height>0.25in</Height>
-            <Width>2.39583in</Width>
-            <ZIndex>2</ZIndex>
-            <DataElementOutput>NoOutput</DataElementOutput>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
         </ReportItems>
-        <Height>0.79181in</Height>
+        <Height>1.00708in</Height>
         <Style />
       </Body>
-      <Width>7.81258in</Width>
+      <Width>12.38145in</Width>
       <Page>
         <PageHeader>
-          <Height>0.60625in</Height>
+          <Height>0.6375in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="tReportTitle">
+            <Textbox Name="tPage">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>CD DCM Telemarketing Renewal Data</Value>
+                      <Value>="Page " &amp; Cstr(Globals!PageNumber) &amp; " of " &amp; Cstr(Globals!TotalPages)</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
-                        <FontSize>12pt</FontSize>
+                        <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.3125in</Top>
-              <Left>0.01042in</Left>
+              <Top>0.32778in</Top>
+              <Left>8.79729in</Left>
               <Height>0.25in</Height>
-              <Width>4.09375in</Width>
+              <Width>2.8in</Width>
               <Style>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -1410,14 +1184,14 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="tCompanyName">
+            <Textbox Name="tCompanyName2">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=IIf(Len(Parameters!rpt_title.Value)=0,Parameters!CompanyName.Value,Parameters!rpt_title.Value)</Value>
+                      <Value>=IIf(Len(Parameters!rpt_title.Value) = 0, Parameters!CompanyName.Value, Parameters!rpt_title.Value)</Value>
                       <Style>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>14pt</FontSize>
@@ -1431,44 +1205,47 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>0.01042in</Left>
+              <Left>0.37645in</Left>
               <Height>0.3in</Height>
-              <Width>7.2in</Width>
+              <Width>8.36528in</Width>
               <ZIndex>1</ZIndex>
               <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="tPage">
+            <Textbox Name="tReportTitle">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Date: " &amp; Globals!ExecutionTime &amp; VbCrLf &amp;
-"Page: " &amp; Cstr(Globals!PageNumber) &amp; " of " &amp; Cstr(Globals!TotalPages)
-&amp; Space(10) &amp; Parameters!UserId.Value</Value>
+                      <Value>CD Heat Map</Value>
                       <Style>
-                        <FontSize>8pt</FontSize>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
+                  <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.3125in</Top>
-              <Left>4.38542in</Left>
+              <Top>0.32778in</Top>
+              <Left>0.37645in</Left>
               <Height>0.25in</Height>
-              <Width>2.8in</Width>
+              <Width>1.71875in</Width>
               <ZIndex>2</ZIndex>
               <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1479,12 +1256,76 @@
           <Style />
         </PageHeader>
         <PageFooter>
-          <Height>0.2125in</Height>
+          <Height>0.22292in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="tRunAudit">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Run by " &amp; Parameters!UserId.Value &amp; "/" &amp; Parameters!UserGroup.Value &amp; " on " &amp; Globals!ExecutionTime &amp; " (Request " &amp; Parameters!RequestId.Value &amp; ")"</Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.02292in</Top>
+              <Left>8.71396in</Left>
+              <Height>0.2in</Height>
+              <Width>2.89375in</Width>
+              <Style>
+                <Border />
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Label>FullReportPath</Label>
+                      <Value>=Globals!ReportFolder &amp; "/" &amp; Globals!ReportName</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>textbox1</rd:DefaultName>
+              <Top>0.0125in</Top>
+              <Left>0.39729in</Left>
+              <Height>0.1875in</Height>
+              <Width>4.09375in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
           <Style />
         </PageFooter>
-        <PageWidth>8.27in</PageWidth>
+        <PageHeight>8.5in</PageHeight>
+        <PageWidth>11in</PageWidth>
         <LeftMargin>0.5in</LeftMargin>
         <RightMargin>0.5in</RightMargin>
         <TopMargin>0.5in</TopMargin>
@@ -1498,7 +1339,7 @@
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>admin</Value>
+          <Value>Admin</Value>
         </Values>
       </DefaultValue>
       <Prompt>Usergroup</Prompt>
@@ -1508,7 +1349,7 @@
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>admin</Value>
+          <Value>tshelehe</Value>
         </Values>
       </DefaultValue>
       <Prompt>UserId</Prompt>
@@ -1518,7 +1359,7 @@
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>hollys test</Value>
+          <Value>PCT</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1535,43 +1376,46 @@
       <Prompt>RequestId</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
-    <ReportParameter Name="show_param">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>show_param</Prompt>
+    <ReportParameter Name="Season">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1315</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Season</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="Perf_no">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>63739</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Perf no</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="rpt_title">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>rpt_title</Prompt>
+      <Prompt>Enter your own report title</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
-    <ReportParameter Name="season">
-      <DataType>Integer</DataType>
+    <ReportParameter Name="show_param">
+      <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>1406</Value>
+          <Value>1</Value>
         </Values>
       </DefaultValue>
-      <Prompt>season</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="list_no">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>189239</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>list no</Prompt>
+      <Prompt>Display Parameters?</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>6</NumberOfColumns>
+      <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
@@ -1595,24 +1439,24 @@
           <ParameterName>RequestId</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>4</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>show_param</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>5</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>rpt_title</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>season</ParameterName>
+          <ParameterName>Season</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>list_no</ParameterName>
+          <ParameterName>Perf_no</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>rpt_title</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>show_param</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

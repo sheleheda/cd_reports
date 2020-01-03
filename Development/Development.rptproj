@@ -102,6 +102,7 @@
     <Report Include="ld_contribution_activity_report.rdl" />
     <Report Include="ld_contribution_level_detail.rdl" />
     <Report Include="ld_contribution_statement.rdl" />
+    <Report Include="ld_honor_memory.rdl" />
     <Report Include="ld_new_cont_SSRS.rdl" />
     <Report Include="ld_patron_activity_report_SSRS.rdl" />
     <Report Include="ld_step_detail.rdl" />
