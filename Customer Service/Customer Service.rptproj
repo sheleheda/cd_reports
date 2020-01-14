@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="ld_bulk_csi.rdl" />
+    <Report Include="ld_cust_svc_issue_tracking.rdl" />
     <Report Include="ld_cust_svc_issue_tracking_SSRS.rdl" />
     <Report Include="ld_psr_tracking_SSRS.rdl" />
     <Report Include="ld_reminders.rdl" />
