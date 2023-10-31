@@ -46,12 +46,12 @@
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform />
-    <TargetReportFolder>cd_reports/Labels and Letters</TargetReportFolder>
+    <TargetReportFolder>beta/cd_reports/Labels and Letters</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
-    <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
-    <TargetServerURL>http://duff.tessitura.cd.local/ReportServer_dev</TargetServerURL>
+    <TargetDatasourceFolder>beta/Data Sources</TargetDatasourceFolder>
+    <TargetServerURL>http://duff/ReportServer</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Legacy' ">
     <FullPath>Legacy</FullPath>

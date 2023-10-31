@@ -48,13 +48,13 @@
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
     <OverwriteDataSources>False</OverwriteDataSources>
-    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform />
-    <TargetReportFolder>/cd_reports/Ticketing Subscription</TargetReportFolder>
+    <TargetReportFolder>beta/cd_reports/Ticketing Subscription</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
-    <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
+    <TargetDatasourceFolder>beta/Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://duff.tessitura.cd.local/reportserver_beta</TargetServerURL>
+    <TargetServerURL>http://duff/reportserver</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Legacy' ">
     <FullPath>Legacy</FullPath>
