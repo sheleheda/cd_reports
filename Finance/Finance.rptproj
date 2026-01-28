@@ -107,6 +107,7 @@
     <Report Include="ld_advert_insert_sum.rdl" />
     <Report Include="ld_advert_insert_sum_gt.rdl" />
     <Report Include="ld_cc_expiry.rdl" />
+    <Report Include="ld_chargebacks.rdl" />
     <Report Include="ld_deposit_rec_sum.rdl" />
     <Report Include="ld_dist_fee.rdl" />
     <Report Include="ld_EPSCompare.rdl" />

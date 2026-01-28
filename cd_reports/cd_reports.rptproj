@@ -103,6 +103,7 @@
     <Report Include="EPSTransactionSummary.rdl" />
     <Report Include="EPSTransactionSummaryNEW.rdl" />
     <Report Include="EPSTransactionTotals.rdl" />
+    <Report Include="FundActivityReport_Custom.rdl" />
     <Report Include="ld_acknowledgements.rdl" />
     <Report Include="ld_active_logins.rdl" />
     <Report Include="ld_cust_svc_issue_tracking_SSRS.rdl" />
