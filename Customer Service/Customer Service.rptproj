@@ -11,7 +11,7 @@
     <TargetReportFolder>cd_reports/Customer Service</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
-    <TargetServerURL>http://duff/ReportServer_dev</TargetServerURL>
+    <TargetServerURL>https://tessreports-test.culturaldistrict.org/Reports</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <FullPath>Release</FullPath>

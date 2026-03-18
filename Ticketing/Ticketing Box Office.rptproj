@@ -111,6 +111,7 @@
     <Report Include="ld_order_sch_pmt.rdl" />
     <Report Include="ld_payments_by_performance.rdl" />
     <Report Include="ld_payment_by_perf_detail.rdl" />
+    <Report Include="ld_pcat_audit_perf_dt.rdl" />
     <Report Include="ld_perf_audit_by_pt_category.rdl" />
     <Report Include="ld_perf_audit_price_cat.rdl" />
     <Report Include="ld_perf_blackout.rdl" />
@@ -137,7 +138,6 @@
     <Report Include="ld_ss_sales_by_org.rdl" />
     <Report Include="ld_wheelchair_report.rdl" />
     <Report Include="ld_zone_price.rdl" />
-    <Report Include="TessituraReportTemplate.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
